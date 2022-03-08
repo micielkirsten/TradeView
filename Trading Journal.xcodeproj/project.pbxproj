@@ -14,6 +14,9 @@
 		5848621527D3D52900912F99 /* Trading_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848621427D3D52900912F99 /* Trading_JournalTests.swift */; };
 		5848621F27D3D52900912F99 /* Trading_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848621E27D3D52900912F99 /* Trading_JournalUITests.swift */; };
 		5848622127D3D52900912F99 /* Trading_JournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848622027D3D52900912F99 /* Trading_JournalUITestsLaunchTests.swift */; };
+		5877982727D713F8004FE219 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877982627D713F8004FE219 /* CalendarView.swift */; };
+		5877982A27D71419004FE219 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877982927D71419004FE219 /* GetStarted.swift */; };
+		5877982D27D7152A004FE219 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877982C27D7152A004FE219 /* DatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		5848621A27D3D52900912F99 /* Trading JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trading JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5848621E27D3D52900912F99 /* Trading_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_JournalUITests.swift; sourceTree = "<group>"; };
 		5848622027D3D52900912F99 /* Trading_JournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_JournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5877982627D713F8004FE219 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		5877982927D71419004FE219 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
+		5877982C27D7152A004FE219 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		5848620227D3D52800912F99 /* Trading Journal */ = {
 			isa = PBXGroup;
 			children = (
-				5848620327D3D52800912F99 /* Trading_JournalApp.swift */,
 				5848620527D3D52800912F99 /* ContentView.swift */,
+				5848620327D3D52800912F99 /* Trading_JournalApp.swift */,
+				585B425927D67B0700F84DD8 /* Screens */,
 				5848620727D3D52900912F99 /* Assets.xcassets */,
 				5848620927D3D52900912F99 /* Preview Content */,
 			);
@@ -125,6 +132,16 @@
 				5848622027D3D52900912F99 /* Trading_JournalUITestsLaunchTests.swift */,
 			);
 			path = "Trading JournalUITests";
+			sourceTree = "<group>";
+		};
+		585B425927D67B0700F84DD8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5877982927D71419004FE219 /* GetStarted.swift */,
+				5877982627D713F8004FE219 /* CalendarView.swift */,
+				5877982C27D7152A004FE219 /* DatePicker.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +276,9 @@
 			files = (
 				5848620627D3D52800912F99 /* ContentView.swift in Sources */,
 				5848620427D3D52800912F99 /* Trading_JournalApp.swift in Sources */,
+				5877982A27D71419004FE219 /* GetStarted.swift in Sources */,
+				5877982727D713F8004FE219 /* CalendarView.swift in Sources */,
+				5877982D27D7152A004FE219 /* DatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
