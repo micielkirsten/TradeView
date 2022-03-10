@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct GetStarted: View {
     var body: some View {
+            
         ZStack{
             Color(#colorLiteral(red: 0.04, green: 0.09, blue: 0.05, alpha: 1.00))
                 .edgesIgnoringSafeArea(.all)
@@ -23,25 +25,29 @@ struct GetStarted: View {
                 Spacer()
                 
                 VStack{
+                    
                     Button {
-                        CalendarView()
+                        
                     } label: {
                             Text("Get Started")
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 50 ,alignment: .center)
-                            .foregroundColor(.white)
-                            .background(Color.red)
+                            .foregroundColor(Color(#colorLiteral(red: 0.04, green: 0.09, blue: 0.05, alpha: 1.00)))
+                            .background(Color.white)
                             .cornerRadius(20)
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
                         }
                     Spacer()
+                    }
                 }
             }
         }
     }
-}
 
 struct GetStarted_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        Group {
+            GetStarted()
+        }
     }
 }
