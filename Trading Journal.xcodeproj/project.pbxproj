@@ -106,10 +106,10 @@
 		5848620227D3D52800912F99 /* Trading Journal */ = {
 			isa = PBXGroup;
 			children = (
-				5848620527D3D52800912F99 /* ContentView.swift */,
 				5848620327D3D52800912F99 /* Trading_JournalApp.swift */,
-				5877983127D9B3F7004FE219 /* Models */,
+				5848620527D3D52800912F99 /* ContentView.swift */,
 				585B425927D67B0700F84DD8 /* Screens */,
+				5877983127D9B3F7004FE219 /* Models */,
 				5848620727D3D52900912F99 /* Assets.xcassets */,
 				5848620927D3D52900912F99 /* Preview Content */,
 			);
