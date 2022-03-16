@@ -20,6 +20,7 @@
 		5877982F27D9B3BE004FE219 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877982E27D9B3BE004FE219 /* LoginPage.swift */; };
 		5877983327D9B410004FE219 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877983227D9B410004FE219 /* LoginPageModel.swift */; };
 		5877983527D9B77C004FE219 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877983427D9B77C004FE219 /* CustomCorners.swift */; };
+		58D49E1527DC5CFF00E4A924 /* DataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D49E1427DC5CFF00E4A924 /* DataValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5877982E27D9B3BE004FE219 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		5877983227D9B410004FE219 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
 		5877983427D9B77C004FE219 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		58D49E1427DC5CFF00E4A924 /* DataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +146,10 @@
 		585B425927D67B0700F84DD8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5877982927D71419004FE219 /* GetStarted.swift */,
-				5877982E27D9B3BE004FE219 /* LoginPage.swift */,
 				5877983427D9B77C004FE219 /* CustomCorners.swift */,
 				5877982627D713F8004FE219 /* CalendarView.swift */,
 				5877982C27D7152A004FE219 /* DatePicker.swift */,
+				58D49E1327DC22F000E4A924 /* Login */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -157,8 +158,18 @@
 			isa = PBXGroup;
 			children = (
 				5877983227D9B410004FE219 /* LoginPageModel.swift */,
+				58D49E1427DC5CFF00E4A924 /* DataValue.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		58D49E1327DC22F000E4A924 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5877982927D71419004FE219 /* GetStarted.swift */,
+				5877982E27D9B3BE004FE219 /* LoginPage.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			files = (
 				5848620627D3D52800912F99 /* ContentView.swift in Sources */,
 				5848620427D3D52800912F99 /* Trading_JournalApp.swift in Sources */,
+				58D49E1527DC5CFF00E4A924 /* DataValue.swift in Sources */,
 				5877983327D9B410004FE219 /* LoginPageModel.swift in Sources */,
 				5877982A27D71419004FE219 /* GetStarted.swift in Sources */,
 				5877982727D713F8004FE219 /* CalendarView.swift in Sources */,
