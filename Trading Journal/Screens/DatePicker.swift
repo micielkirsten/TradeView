@@ -76,8 +76,7 @@ struct DatePicker: View {
                 ForEach(extractDate()){
                     value in
                     //prints individual dates
-                    Text("\(value.day)")
-                        .font(.title3.bold())
+                    CardView(value: value)
                     
                 }
             }
@@ -90,8 +89,45 @@ struct DatePicker: View {
         }
     }
     
-    //extract year and month for display
+    @ViewBuilder
     
+    func CardView(value: DateValue) -> some View{
+        VStack{
+            if value.day != -1{
+            
+                if let Trade = trades.first(where: { Trade in
+                    
+                    return isSameDay(date1: Trade.taskDate, date2: value.date)
+                }){
+                    Text("\(value.day)")
+                        .font(.title3.bold())
+                    
+                    Spacer()
+                    
+                    Circle()
+                        .fill(Color("Green"))
+                        .frame(width: 8, height: 8)
+                }
+                else{
+                    Text("\(value.day)")
+                        .font(.title3.bold())
+                    
+                    Spacer()
+                }
+            }
+        }
+        .padding(.vertical,8)
+        .frame(height: 60, alignment: .top)
+    }
+    
+    //checking dates
+    func isSameDay(date1: Date, date2: Date) -> Bool{
+        let calendar = Calendar.current
+        
+        return calendar.isDate(date1, inSameDayAs: date2)
+    }
+    
+    //extract year and month for display
     func extraDate ()-> [String]{
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY MMMM"
@@ -117,13 +153,20 @@ struct DatePicker: View {
         // get current month date
         let currentMonth = getCurrentMonh()
         
-        return currentMonth.getAllDate().compactMap {
+        var days = currentMonth.getAllDate().compactMap {
             date -> DateValue in
             // gets the days
             let day = calendar.component(.day, from: date)
             
             return DateValue(day: day, date: date)
         }
+        //adding offset days
+        let firstWeekday = calendar.component(.weekday, from: days.first?.date ?? Date())
+        
+        for _ in 0..<firstWeekday - 1{
+            days.insert(DateValue(day: -1, date: Date()), at: 0)
+        }
+            return days
     }
 }
 
@@ -144,15 +187,14 @@ extension Date{
         
         let startDate = calendar.date(from: Calendar.current.dateComponents([.year,.month], from: self))!
         
-        var range = calendar.range(of: .day, in: .month, for: startDate)!
-        range.removeLast()
+        let range = calendar.range(of: .day, in: .month, for: startDate)!
         
         // returning all the dates
         return range.compactMap{
             
             day -> Date in
             
-            return calendar.date(byAdding: .day, value: day == 1 ? 0 : day, to: startDate)!
+            return calendar.date(byAdding: .day, value: day - 1, to: startDate)!
         }
     }
 }

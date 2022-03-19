@@ -21,6 +21,7 @@
 		5877983327D9B410004FE219 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877983227D9B410004FE219 /* LoginPageModel.swift */; };
 		5877983527D9B77C004FE219 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5877983427D9B77C004FE219 /* CustomCorners.swift */; };
 		58D49E1527DC5CFF00E4A924 /* DataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D49E1427DC5CFF00E4A924 /* DataValue.swift */; };
+		58F598D427E5545B00563470 /* TradeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F598D327E5545B00563470 /* TradeLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5877983227D9B410004FE219 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
 		5877983427D9B77C004FE219 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		58D49E1427DC5CFF00E4A924 /* DataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValue.swift; sourceTree = "<group>"; };
+		58F598D327E5545B00563470 /* TradeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				5877983227D9B410004FE219 /* LoginPageModel.swift */,
 				58D49E1427DC5CFF00E4A924 /* DataValue.swift */,
+				58F598D327E5545B00563470 /* TradeLog.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				58D49E1527DC5CFF00E4A924 /* DataValue.swift in Sources */,
 				5877983327D9B410004FE219 /* LoginPageModel.swift in Sources */,
 				5877982A27D71419004FE219 /* GetStarted.swift in Sources */,
+				58F598D427E5545B00563470 /* TradeLog.swift in Sources */,
 				5877982727D713F8004FE219 /* CalendarView.swift in Sources */,
 				5877983527D9B77C004FE219 /* CustomCorners.swift in Sources */,
 				5877982F27D9B3BE004FE219 /* LoginPage.swift in Sources */,
