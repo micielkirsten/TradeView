@@ -20,6 +20,34 @@ struct CalendarView: View {
             
             DatePicker(currentDate: $currentDate)
             }
+        .padding(.vertical)
+        }
+        //buttons for adding trades
+        .safeAreaInset(edge: .bottom){
+            HStack{
+                Button{
+                    
+                } label: {
+                    Text("Graph")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(.black), in: Capsule())
+                }
+                Button{
+                    
+                } label: {
+                    Text("Add Trade")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(.red), in: Capsule())
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top,10)
+            .foregroundColor(.white)
+            .background(.ultraThinMaterial)
         }
     }
 }

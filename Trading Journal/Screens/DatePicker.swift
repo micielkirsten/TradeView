@@ -40,15 +40,17 @@ struct DatePicker: View {
                 } label: {
                     Image(systemName: "chevron.left")
                         .font(.title2)
+                        .foregroundColor(.red)
                 }
                 
                 Button {
                     withAnimation{
-                        currentMonth -= 1
+                        currentMonth += 1
                     }
                 } label: {
                     Image(systemName: "chevron.right")
                         .font(.title2)
+                        .foregroundColor(.red)
                 }
             }
             .padding(.horizontal)
@@ -77,10 +79,55 @@ struct DatePicker: View {
                     value in
                     //prints individual dates
                     CardView(value: value)
+                        .background(
+                            Capsule()
+                                .fill(Color(.red))
+                                .padding(.horizontal,8)
+                                .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
+                        )
+                        .onTapGesture {
+                            currentDate = value.date
+                        }
                     
                 }
             }
         }
+        VStack(spacing: 15){
+            Text("Trade Log")
+                .font(.title2.bold())
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 20)
+            
+            if let trade = trades.first(where: { trade in
+                
+                return isSameDay(date1: trade.taskDate, date2: currentDate)
+                
+            }){
+                ForEach(trade.task){trade in
+                    VStack(alignment: .leading, spacing: 10){
+                        Text(trade.time
+                            .addingTimeInterval(CGFloat
+                                .random(in: 0...5000)), style: .time)
+                        
+                        Text(trade.title)
+                            .font(.title2.bold())
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        
+                        Color(.red)
+                            .opacity(0.5)
+                            .cornerRadius(10)
+                    )
+                }
+            }
+            else{
+                Text("No Trades Found")
+            }
+        }
+        .padding()
         // updates current month
         .onChange(of: currentMonth) { newValue in
             
@@ -95,22 +142,26 @@ struct DatePicker: View {
         VStack{
             if value.day != -1{
             
-                if let Trade = trades.first(where: { Trade in
+                if let trade = trades.first(where: { trade in
                     
-                    return isSameDay(date1: Trade.taskDate, date2: value.date)
+                    return isSameDay(date1: trade.taskDate, date2: value.date)
                 }){
                     Text("\(value.day)")
                         .font(.title3.bold())
+                        .foregroundColor(isSameDay(date1: trade.taskDate, date2: currentDate) ? .white : .primary)
+                        .frame(maxWidth: .infinity)
                     
                     Spacer()
                     
                     Circle()
-                        .fill(Color("Green"))
+                        .fill(isSameDay(date1: trade.taskDate, date2: currentDate) ? .white : Color(.red))
                         .frame(width: 8, height: 8)
                 }
                 else{
                     Text("\(value.day)")
                         .font(.title3.bold())
+                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
+                        .frame(maxWidth: .infinity)
                     
                     Spacer()
                 }
